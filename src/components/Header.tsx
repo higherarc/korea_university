@@ -27,20 +27,14 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo Section */}
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-3">
-                <Image
-                  src="/images/logo/ku-logo.png"
-                  alt="고려대학교 로고"
-                  width={60}
-                  height={60}
-                  className="object-contain"
-                />
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-800">한반도보건사회연구소</h1>
-                  <p className="text-sm text-gray-600">Korea University Institute for Health and Social Affairs on Korean Peninsula</p>
-                </div>
-              </div>
+            <div className="flex items-center">
+              <Image
+                src="/images/logo/logo.svg"
+                alt="고려대학교 한반도보건사회연구소"
+                width={400}
+                height={120}
+                className="object-contain"
+              />
             </div>
 
             {/* Desktop Navigation */}

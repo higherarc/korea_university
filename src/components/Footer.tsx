@@ -14,8 +14,8 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-4 text-center">QUICK MENU</h4>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/images/logo/footer-logo.png"
-                  alt="고려대학교 생명과학대학 생명공학부 생명정보학전공"
+                  src="/images/logo/logo.svg"
+                  alt="고려대학교 한반도보건사회연구소"
                   width={200}
                   height={60}
                   className="object-contain"
