@@ -11,7 +11,7 @@ const Header = () => {
     <>
       {/* Top Bar */}
       <div className="bg-gray-600 text-white text-sm py-2">
-        <div className="container mx-auto px-4 flex justify-end space-x-4">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16 flex justify-end space-x-4">
           <Link href="#" className="hover:text-blue-300">Home</Link>
           <span>|</span>
           <Link href="#" className="hover:text-blue-300">로그인</Link>
@@ -24,7 +24,7 @@ const Header = () => {
 
       {/* Main Header */}
       <header className="bg-white shadow-md">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="flex items-center justify-between py-4">
             {/* Logo Section */}
             <div className="flex items-center">

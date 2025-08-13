@@ -8,17 +8,17 @@ const HeroSection = () => {
 
   const slides = [
     {
-      image: '/images/slider/main-building.jpg',
+      image: '/images/content/main1.jpg',
       title: 'Next Korea,',
       subtitle: '한반도 통합 미래 비전'
     },
     {
-      image: '/images/slider/research-facility.jpg',
+      image: '/images/content/main2.jpg',
       title: '건강한 한반도,',
       subtitle: '사회통합 연구의 중심'
     },
     {
-      image: '/images/slider/conference.jpg',
+      image: '/images/content/main3.JPG',
       title: '미래를 준비하는',
       subtitle: '한반도 연구의 허브'
     }
@@ -27,7 +27,7 @@ const HeroSection = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 4000); // 4초마다 이미지 전환
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -46,8 +46,8 @@ const HeroSection = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+            index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
           }`}
         >
           <div className="relative w-full h-full">
@@ -65,7 +65,7 @@ const HeroSection = () => {
 
       {/* Content Overlay */}
       <div className="relative z-10 h-full flex items-center justify-center">
-        <div className="text-center text-white px-4">
+        <div className="text-center text-white px-6 md:px-8 lg:px-12 xl:px-16 max-w-4xl mx-auto">
           <h2 className="text-4xl lg:text-6xl font-bold mb-4 animate-fade-in">
             {slides[currentSlide].title}
           </h2>
@@ -78,7 +78,7 @@ const HeroSection = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-3 rounded-full transition-all"
+        className="absolute left-6 md:left-8 lg:left-12 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-3 rounded-full transition-all"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -86,7 +86,7 @@ const HeroSection = () => {
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-3 rounded-full transition-all"
+        className="absolute right-6 md:right-8 lg:right-12 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-40 text-white p-3 rounded-full transition-all"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
